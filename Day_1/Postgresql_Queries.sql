@@ -37,16 +37,16 @@ order_amount decimal(10,2) not null
 
 -- Insert a single record in customer
 Insert into customer(first_name,last_name,email,created_date,updated_date,active)
-values('Bavnit','Singh','bavnit@gmail.com',Now(),Null,true);
+values('Rajkumar','Prajapati','raj@gmail.com',Now(),Null,true);
 
 -- select * from customer
 
 -- Insert multiple records
 insert into customer (first_name,last_name,email,created_date,updated_date,active)
-values('Harman','singh','harman@gmail.com',Now(),Null,true),
-('Harpreet','singh','harpreet@gmail.com',Now(),Null,true),
-('Jasmit','singh','jasmit@gmail.com',Now(),Null,true),
-('Gurmeet','singh','gurmit@gmail.com',Now(),Null,true);
+values('Bhavik','Prajapati','bhavik@gmail.com',Now(),Null,true),
+('Alpesh','Prajapati','alpesh@gmail.com',Now(),Null,true),
+('Ramesh','Prajapati','ramesh@gmail.com',Now(),Null,true),
+('Bharat','Prajapati','bharat@gmail.com',Now(),Null,true);
 
 -- Insert Orders
 INSERT INTO orders (customer_id, order_date, order_number, order_amount) VALUES
@@ -70,9 +70,9 @@ select first_name,last_name from customer order by  last_name desc ;
 select first_name,last_name from customer order by first_name asc ,last_name desc;
 
 -- Where Clause examples
-select first_name,last_name from customer where first_name = 'Harpreet';
-select customer_id , first_name,last_name from customer where first_name = 'Bavnit';
-SELECT customer_id, first_name, last_name FROM customer WHERE first_name IN ('John', 'Daud', 'Jasmit');
+select first_name,last_name from customer where first_name = 'Bhavik';
+select customer_id , first_name,last_name from customer where first_name = 'Rajkumar';
+SELECT customer_id, first_name, last_name FROM customer WHERE first_name IN ('John', 'Daud', 'Alpesh');
 
 -- Join Examples
 select * from orders as o inner join customer as c on o.customer_id = c.customer_id;
@@ -111,18 +111,8 @@ WHERE EXISTS (
 
 -- Update Statement
 UPDATE customer
-SET first_name = 'Dilip', last_name = 'singh', email = 'dilip@tatvasoft.com'
+SET first_name = 'Chetan', last_name = 'Prajapati', email = 'chetan@tatvasoft.com'
 WHERE customer_id = 3;
 
 -- Delete statement
 delete from customer where customer_id = 2;
-
-
-
-
-
-
-
-
-
-
