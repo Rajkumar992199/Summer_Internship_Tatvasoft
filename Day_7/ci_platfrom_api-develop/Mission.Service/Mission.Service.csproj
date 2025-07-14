@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="MailKit" Version="4.12.0" />
+	<PackageReference Include="MimeKit" Version="4.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mission.Repository\Mission.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
